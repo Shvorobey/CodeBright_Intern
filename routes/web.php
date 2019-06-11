@@ -11,11 +11,9 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 Auth::routes();
+
+Route::get('/admin', 'HomeController@index')->name('admin');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
@@ -25,4 +23,8 @@ Route::get('/about', 'showPagesAction@about')->name('about');
 
 Route::get('/contact', 'showPagesAction@contact')->name('contact');
 
-//Route::get('/company/{key}', '\\' . \App\Http\Controllers\showCompanyAction::class)->name('single_company');
+Route::get('/locator', function () {
+    return view('locator');
+})->name('locator');
+
+Route::get('/company/{key}', '\\' . \App\Http\Controllers\showCompanyAction::class)->name('single_company');

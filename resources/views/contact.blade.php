@@ -1,6 +1,6 @@
 @extends ('layout')
 
-@section('title', 'Блог - Контакты')
+@section('title', 'CodeBrightTest - Контакты')
 
 @section('content')
     <h1 class="my-4">О нас <br> <hr>
@@ -17,13 +17,11 @@
 @section ('advertising')
     <!-- Advertising Widget -->
     <div class="card my-4">
-        <h5 class="card-header">Мы в соц. сетях</h5>
+        <h5 class="card-header">Мы в соц. сетях:</h5>
 
         @inject('network', 'App\socialNetwork')
         <div>
-
-            Категории: <br> {{ $network->showSocialNetwork() }}
-
+            {{ $network->showSocialNetwork() }}
         </div>
     </div>
 @endsection

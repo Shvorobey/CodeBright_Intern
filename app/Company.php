@@ -10,4 +10,9 @@ class Company extends Model
     {
         return $this -> hasMany(Employee::class);
     }
+
+    public function comments ()
+    {
+        return $this -> hasMany(Comment::class);
+    }
 }
