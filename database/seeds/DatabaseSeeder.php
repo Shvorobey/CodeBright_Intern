@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +12,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+//        factory(\App\socialNetwork::class, 1) -> create();
+        \Illuminate\Database\Eloquent\Model::unguard();
+
+        $this->call([socialNetworksTableSeeder::class,
+        pagesTableSeeder::class,
+        ]);
+
     }
+
 }

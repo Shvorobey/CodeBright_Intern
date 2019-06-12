@@ -15,7 +15,7 @@ class CreatePositionsTable extends Migration
     {
         Schema::create('positions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('employee_id')->unsigned();
+            $table->integer('employee_id')->references('id')->on('employees')->onDelete('cascade');
             $table->string('title');
             $table->float('salary');
             $table->softDeletes();
