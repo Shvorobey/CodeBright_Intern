@@ -12,13 +12,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-//        factory(\App\socialNetwork::class, 1) -> create();
         \Illuminate\Database\Eloquent\Model::unguard();
 
         $this->call([socialNetworksTableSeeder::class,
         pagesTableSeeder::class,
         ]);
 
+        factory(\App\Company::class, 50) -> create();
+        factory(\App\Employee::class, 200) -> create();
+        factory(\App\Position::class, 200)->create();
     }
+
+
 
 }
