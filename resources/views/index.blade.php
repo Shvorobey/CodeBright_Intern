@@ -12,7 +12,7 @@
                 <img class="card-img-top" src="{{$company->image}}" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="card-title" style="color:#008000">
-                        <a href="{{route('single_company', $company->key)}}">{{$company->name}}</a></h2>
+                        <a href="{{route('single_company', $company->id)}}">{{$company->name}}</a></h2>
                     <p class="card-text">{{$company->description}}</p>
                     <a href="{{route('single_company', $company->key)}}" class="btn btn-primary">Перейти к компании
                         &rarr;</a>
@@ -28,8 +28,9 @@
                             <th align="center">Фамилия Имя</th>
                             <th align="center">Должность</th>
                             <th align="center">Зарплата</th>
+
                         </tr>@foreach($company->employees as $employee)
-                                 {{dd ($employee)}}
+
                             <tr align="center">
                                 <td>{{$employee->last_name}} {{$employee->first_name}}</td>
                                 <td>{{$employee->positions->title}}</td>
@@ -39,11 +40,6 @@
                     </table>
 
 
-                    {{--                           <ol>--}}
-                    {{--                               <li>{{$employee->last_name}} {{$employee->first_name}} Должность: {{$employee->positions->title}}--}}
-                    {{--                               Зарплата: {{$employee->positions->salary}} $</li>--}}
-                    {{--                           </ol>--}}
-                    {{--                           <a href="{{route('posts_by_category', $category->key)}}">{{$category->categories}}   </a>--}}
 
                 </div>
             </div>

@@ -11,30 +11,70 @@
                 <header class="entry-header">
                     <div class="media-attachment">
                         <div class="post-thumbnail">
-                            <img width="1619" height="827" src="{{$company->image}}"
+                            <img width="300" height="750" src="{{$company->image}}"
                                  class="attachment-full size-full wp-post-image" alt=""/>
                         </div>
                     </div>
                     <h1 class="entry-title">{{$company->name}}</h1>
                     <div class="entry-meta">
-
                     <span class="posted-on">
                                     <div class="label"><strong>Зарегестрирована на сайте:</strong></div>
                                     <time class="entry-date published"
                                           datetime="{{$company->created_at}}">{{$company->created_at->format('d.m.Y г. в H:i')}}</time>
-
                                 </span>
-                        {{--                    <div class="author">--}}
-                        {{--                        <div class="label">Автор:</div>--}}
-                        {{--                        <a href="{{route('posts-by-autor', $posts->user->id )}}"--}}
-                        {{--                           title="Posts by {{$posts->user->name}}" rel="author">{{$posts->user->name}}</a>--}}
-                        {{--                    </div>--}}
-                    </div>
+                          </div>
                 </header>
                 <!-- .entry-header -->
                 <div class="entry-content">
                     <strong>О компании:</strong>
                     <p class="highlight">{{$company->description}} </p>
+                    <strong>Работники компании:</strong>
+                    <table cellpadding="7" border="2" bgcolor="#DCDCDC">
+                        <tr>
+                            <th align="center">Фамилия Имя</th>
+                            <th align="center">Должность</th>
+                            <th align="center">Зарплата</th>
+                        </tr>@foreach($company->employees as $employee)
+                            <tr align="center">
+                                <td>{{$employee->last_name}} {{$employee->first_name}}</td>
+                                <td>{{$employee->positions->title}}</td>
+                                <td>{{$employee->positions->salary}} $</td>
+                            </tr>
+                        @endforeach
+                    </table>
+                    <h2 class="card-title" style="color:#008000">
+{{--                        <a href="{{route('company_update', $company->key)}}">Изменить информацию о компании:</a></h2>--}}
+                    <form action="" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <strong>Описание компании:</strong> <br>
+                        <input type="text" name="description" placeholder="Не более 1000 символов"
+                               value="{{old ('description', $company->description )}}"/><br>
+                        @if ($errors->any('description'))
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->get('description') as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <hr>
+                        <strong>Изображение:</strong> <i>300x750</i><strong> :</strong>
+                        <input type="file" name="image"/><br>
+                        <input type="hidden" name="id" value="{{old('id', $company->id)}}"/>
+                        @if ($errors->any('image'))
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->get('image') as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <hr>
+                        <input type="submit" value="Сохранить"/>
+                    </form>
+
                     <div class="row">
                         <div class="col-md-6">
                             <strong>Коментарии:</strong>
@@ -44,18 +84,9 @@
                                     Создан: {{$comment->created_at->format('d.m.Y г. в H:i')}}</li>
                                 </ol>
                             @endforeach
-{{--                                <blockquote>--}}
-{{--                                    <p>Pellentesque sodales augue eget ultricies ultricies. Cum sociis natoque--}}
-{{--                                        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur--}}
-{{--                                        sagittis ultrices condimentum.</p>--}}
-{{--                                </blockquote>--}}
                         </div>
-
                     </div>
-
                 </div>
-
-
                 <section id="comments" class="comments-area" aria-label="Post Comments">
                     <div id="respond" class="comment-respond">
                               <span id="reply-title" class="gamma comment-reply-title">Оставить комментарий
@@ -64,13 +95,8 @@
                               </small>
                               </span>
                         <form id="commentform" class="comment-form" novalidate>
-                            <p class="comment-notes">
-                                <span id="email-notes">Ваш email не будет опубликован.</span> <span
-                                        class="required"></span>
-                            </p>
                             <p class="comment-form-comment">
-                                <label for="comment">Комментарий</label>
-                                <textarea id="comment" name="comment" cols="45" rows="8"
+                                <textarea id="comment" name="body" cols="45" rows="8"
                                           maxlength="65525"></textarea>
                             </p>
                             <p class="comment-form-author">

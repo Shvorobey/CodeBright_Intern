@@ -27,4 +27,5 @@ Route::get('/locator', function () {
     return view('locator');
 })->name('locator');
 
-Route::get('/company/{key}', '\\' . \App\Http\Controllers\showCompanyAction::class)->name('single_company');
+Route::match(['get', 'post'],'/company/{id}', '\\' . \App\Http\Controllers\showCompanyAction::class)->name('single_company');
+

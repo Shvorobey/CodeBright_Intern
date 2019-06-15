@@ -28,7 +28,7 @@ class pagesTableSeeder extends Seeder
         <li>Адрес: г. Одесса, ул. Такая-то, 7 </li> 
         <li>Telegram: XXXXXXXXXX </li>
         <li>Как нас найти: </li>
-        <img class="card-img-top" src=https://img-fotki.yandex.ru/get/6100/97833783.ce4/0_12bbef_9992349b_XXXL.jpg width="300" height="600" alt="Card image cap">
+        <img class="card-img-top" src=https://tudoy-sudoy.od.ua/wp-content/uploads/2018/02/karta-odessa-old-3.jpg width="300" height="600" alt="Card image cap">
         ',
         ]);
     }
