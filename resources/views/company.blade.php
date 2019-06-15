@@ -42,8 +42,6 @@
                             </tr>
                         @endforeach
                     </table>
-                    <h2 class="card-title" style="color:#008000">
-{{--                        <a href="{{route('company_update', $company->key)}}">Изменить информацию о компании:</a></h2>--}}
                     <form action="" method="post" enctype="multipart/form-data">
                         @csrf
                         <strong>Описание компании:</strong> <br>
@@ -74,7 +72,7 @@
                         <hr>
                         <input type="submit" value="Сохранить"/>
                     </form>
-
+                        @if (\Auth::check ())
                     <div class="row">
                         <div class="col-md-6">
                             <strong>Коментарии:</strong>
@@ -86,6 +84,7 @@
                             @endforeach
                         </div>
                     </div>
+
                 </div>
                 <section id="comments" class="comments-area" aria-label="Post Comments">
                     <div id="respond" class="comment-respond">
@@ -119,7 +118,7 @@
                     </div>
 
                 </section>
-
+                @endif
             </article>
             <!-- #post-## -->
         </main>

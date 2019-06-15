@@ -29,3 +29,7 @@ Route::get('/locator', function () {
 
 Route::match(['get', 'post'],'/company/{id}', '\\' . \App\Http\Controllers\showCompanyAction::class)->name('single_company');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
