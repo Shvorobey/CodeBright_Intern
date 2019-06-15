@@ -1,6 +1,6 @@
 @extends ('layout')
 
-@section('title', 'CodeBrightTest - Контакты')
+@section('title', 'CodeBrightTest - О компании')
 
 @section('content')
 
@@ -45,7 +45,7 @@
                     <form action="" method="post" enctype="multipart/form-data">
                         @csrf
                         <strong>Описание компании:</strong> <br>
-                        <input type="text" name="description" placeholder="Не более 1000 символов"
+                        <input type="text" name="description" placeholder="Не более 1000 символов" size="100"
                                value="{{old ('description', $company->description )}}"/><br>
                         @if ($errors->any('description'))
                             <div class="alert alert-danger">
@@ -93,26 +93,28 @@
                               <a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display:none;">Cancel reply</a>
                               </small>
                               </span>
-                        <form id="commentform" class="comment-form" novalidate>
+                        <form action="/save_comment" method="post" id="commentform" class="comment-form" novalidate>
+                            @csrf
                             <p class="comment-form-comment">
                                 <textarea id="comment" name="body" cols="45" rows="8"
                                           maxlength="65525"></textarea>
                             </p>
                             <p class="comment-form-author">
                                 <label for="author">Имя <span class="required"></span></label>
-                                <input id="author" name="author" type="text" value="" size="30" maxlength="245"
+                                <input id="author" name="name" type="text" value="" size="30" maxlength="245"
                                        aria-required='true' required='required'/>
                             </p>
-                            <p class="comment-form-email">
-                                <label for="email">Email <span class="required"></span></label>
-                                <input id="email" name="email" type="email" value="" size="30" maxlength="100"
-                                       aria-describedby="email-notes" aria-required='true' required='required'/>
-                            </p>
+{{--                            <p class="comment-form-email">--}}
+{{--                                <label for="email">Email <span class="required"></span></label>--}}
+{{--                                <input id="email" name="email" type="email" value="" size="30" maxlength="100"--}}
+{{--                                       aria-describedby="email-notes" aria-required='true' required='required'/>--}}
+{{--                            </p>--}}
                             <p class="form-submit">
                                 <input name="submit" type="submit" id="submit" class="submit"
                                        value="Сохранить комментарий"/>
-                                <input type='hidden' name='comment_post_ID' value='359' id='comment_post_ID'/>
-                                <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+                                <input type="hidden" name="company_id" value="{{old('id', $company->id)}}"/>
+{{--                                <input type='hidden' name='comment_post_ID' value='359' id='comment_post_ID'/>--}}
+{{--                                <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>--}}
                             </p>
                         </form>
                     </div>

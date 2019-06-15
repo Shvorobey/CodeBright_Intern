@@ -29,6 +29,7 @@ Route::get('/locator', function () {
 
 Route::match(['get', 'post'],'/company/{id}', '\\' . \App\Http\Controllers\showCompanyAction::class)->name('single_company');
 
+Route::post('/save_comment', '\\' . \App\Http\Controllers\saveCommentAction::class)->name('save_comment');
 
 Auth::routes();
 

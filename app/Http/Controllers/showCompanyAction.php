@@ -14,7 +14,6 @@ class showCompanyAction extends Controller
                 'description' => 'required | max: 1000 | string ',
                 'image' => 'image | dimensions: min_width=200, min_height=500 | file',
             ]);
-//dd ($request->input('id'));
             $company = Company::find($request->input('id'));
             $company->description = $request->input('description');
 
