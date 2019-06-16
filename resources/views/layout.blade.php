@@ -47,8 +47,15 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" style="color:#FFB6C1" href={{route('admin')}}>@if (\Auth::check ()){{\Auth::user()->name}}
+                    <a class="nav-link" style="color:#FFB6C1" href={{route('admin')}}>@if (\Auth::check ()){{\Auth::user()->companies->name}}
                         @else Вход @endif</a>
+                </li>
+                <li class="nav-item">
+                    @if (\Auth::check ())
+{{--                    {{$comp = \Auth::user()->companies->id}}--}}
+                    <a class="nav-link" style="color:#FFB6C1" href={{route('single_company', \Auth::user()->companies->id)}}>
+                        Моя компания
+                        @endif</a>
                 </li>
             </ul>
         </div>
