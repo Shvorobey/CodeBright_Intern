@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Employee;
 use Illuminate\Http\Request;
 
 class deleteEmployeeAction extends Controller
@@ -14,6 +15,11 @@ class deleteEmployeeAction extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        $employe = Employee::FindOrFail($request->input('id'));
+
+            $employe->positions->delete();
+            $employe->delete();
+
+            return back();
     }
 }

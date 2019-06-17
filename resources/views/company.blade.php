@@ -38,12 +38,12 @@
                                 <th align="center">Управление персоналом</th>
                             @endif
                         </tr>
-                        <tr align="center">
                             @foreach($company->employees as $employee)
-
+                            <tr align="center">
                                 <td>{{$employee->last_name}} {{$employee->first_name}}</td>
                                 <td>{{$employee->positions->title}}</td>
                                 <td>{{$employee->positions->salary}} $</td>
+
                                 @if (\Auth::check () and \Auth::user()->companies->id == $company->id)
                                     <td align="left">
                                         <form action="/update_employee" method="post" enctype="multipart/form-data">
@@ -107,87 +107,41 @@
                                             <input type="submit" value="Сохранить"/>
                                         </form>
 
-
-                                        <form method="POST" action="/company-delete">
+                                        <form method="POST" action="/employee-delete">
                                             @csrf
                                             @method ('DELETE')
-                                            <input type="hidden" name="id" value="{{$company->id}}"/>
+                                            <input type="hidden" name="id" value="{{$employee->id}}"/>
                                             <input type="submit" value="Удалить сотрудника"/>
                                         </form>
-
                                     </td>
                                 @endif
-
-
-
+                            </tr>
                             @endforeach
+                            </table>
 
-                        </tr>
-                    </table>
-
-
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="/save_employee" method="post" enctype="multipart/form-data">
                         @csrf
                         <strong>Добавить сотрудника:</strong> <br>
-                        <input type="text" name="description" placeholder="Не более 1000 символов" size="100"
-                               value="{{old ('description', $company->description )}}"/><br>
-                        @if ($errors->any('description'))
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->get('description') as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                        <hr>
+                        <p>Имя:</p>
+                        <input type="text" name="first_name" placeholder="Не более 30 символов" size="30"
+                               value=""/><br>
 
-                        <input type="text" name="description" placeholder="Не более 1000 символов" size="100"
-                               value="{{old ('description', $company->description )}}"/><br>
-                        @if ($errors->any('description'))
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->get('description') as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                        <hr>
+                        <p>Фамилия:</p>
+                        <input type="text" name="last_name" placeholder="Не более 30 символов" size="30"
+                               value=""/><br>
 
+                        <p>Должность:</p>
+                        <input type="text" name="title" placeholder="Не более 100 символов" size="100"
+                               value=""/><br>
 
-                        <input type="text" name="description" placeholder="Не более 1000 символов" size="100"
-                               value="{{old ('description', $company->description )}}"/><br>
-                        @if ($errors->any('description'))
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->get('description') as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                        <hr>
+                        <p>Зарплата:</p>
+                        <input type="text" name="salary" placeholder="Целое число" size="10"
+                               value=""/><br>
 
-
-                        <input type="text" name="description" placeholder="Не более 1000 символов" size="100"
-                               value="{{old ('description', $company->description )}}"/><br>
-                        @if ($errors->any('description'))
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->get('description') as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                        <hr>
-
-
+                        <input type="hidden" name="id" value="{{$company->id}}"/>
                         <input type="submit" value="Сохранить"/>
                     </form>
                     <hr>
-
 
                     <form action="" method="post" enctype="multipart/form-data">
                         @csrf

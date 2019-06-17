@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0a9a439c-ea2a-4afc-a27f-8dba8f39871c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/deleteEmployeeAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/deleteEmployeeAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/saveEmployeeAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/saveEmployeeAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/company.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/company.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,8 +88,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="265">
+              <caret line="35" column="41" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/deleteEmployeeAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#40#57#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/deleteCompanyAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="23" column="42" selection-start-line="18" selection-start-column="8" selection-end-line="27" selection-end-column="42" />
+              <folding>
+                <element signature="e#40#57#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,29 +121,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/company.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="106" column="84" lean-forward="true" selection-start-line="106" selection-start-column="84" selection-end-line="107" selection-end-column="47" />
+            <state relative-caret-position="221">
+              <caret line="112" column="97" selection-start-line="112" selection-start-column="97" selection-end-line="112" selection-end-column="97" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/showCompanyAction.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/saveEmployeeAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="18" selection-start-line="11" selection-start-column="8" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="265">
+              <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
               <folding>
-                <element signature="e#40#56#0#PHP" expanded="true" />
+                <element signature="e#40#57#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/updateEmployeeAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="306">
+              <caret line="27" column="13" selection-start-line="18" selection-start-column="8" selection-end-line="36" selection-end-column="22" />
               <folding>
                 <element signature="e#40#57#0#PHP" expanded="true" />
               </folding>
@@ -187,7 +212,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/updateEmployeeAction.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/saveEmployeeAction.php" />
         <option value="$PROJECT_DIR$/resources/views/company.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/deleteEmployeeAction.php" />
       </list>
     </option>
   </component>
@@ -356,7 +383,7 @@
       <workItem from="1560434890172" duration="1063000" />
       <workItem from="1560464121064" duration="116000" />
       <workItem from="1560503511000" duration="9458000" />
-      <workItem from="1560630261611" duration="27077000" />
+      <workItem from="1560630261611" duration="28979000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1560237808095</created>
@@ -435,11 +462,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560733521033</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added ability to change employee">
+      <created>1560813306003</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560813306003</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91892000" />
+    <option name="totallyTimeSpent" value="93794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -480,15 +514,10 @@
     <MESSAGE value="commentaries implemented" />
     <MESSAGE value="start of company administration" />
     <MESSAGE value="the company can delete itself, the beginning of work on managing employees" />
-    <option name="LAST_COMMIT_MESSAGE" value="the company can delete itself, the beginning of work on managing employees" />
+    <MESSAGE value="added ability to change employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ability to change employee" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/factories/socialNetworkFactory.php" />
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425" />
-      </provider>
-    </entry>
     <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/pages">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -793,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/employees">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
@@ -846,27 +868,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/company.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/updateEmployeeAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="106" column="84" lean-forward="true" selection-start-line="106" selection-start-column="84" selection-end-line="107" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/deleteCompanyAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="61" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="62" />
+        <state relative-caret-position="306">
+          <caret line="27" column="13" selection-start-line="18" selection-start-column="8" selection-end-line="36" selection-end-column="22" />
           <folding>
             <element signature="e#40#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/updateEmployeeAction.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/deleteCompanyAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="356">
+          <caret line="23" column="42" selection-start-line="18" selection-start-column="8" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="35" column="41" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/company.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="112" column="97" selection-start-line="112" selection-start-column="97" selection-end-line="112" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/saveEmployeeAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/deleteEmployeeAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#40#57#0#PHP" expanded="true" />
           </folding>
