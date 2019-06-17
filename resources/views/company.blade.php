@@ -35,22 +35,23 @@
                             <th align="center">Должность</th>
                             <th align="center">Зарплата</th>
                             @if (\Auth::check () and \Auth::user()->companies->id == $company->id)
-                            <th align="center">Управление персоналом</th>
-                                @endif
+                                <th align="center">Управление персоналом</th>
+                            @endif
                         </tr>
                         <tr align="center">
-                        @foreach($company->employees as $employee)
+                            @foreach($company->employees as $employee)
 
                                 <td>{{$employee->last_name}} {{$employee->first_name}}</td>
                                 <td>{{$employee->positions->title}}</td>
                                 <td>{{$employee->positions->salary}} $</td>
-
                                 @if (\Auth::check () and \Auth::user()->companies->id == $company->id)
-                                    <td align="left"><form action="" method="post" enctype="multipart/form-data">
+                                    <td align="left">
+                                        <form action="/update_employee" method="post" enctype="multipart/form-data">
                                             @csrf
                                             <strong>Изменить данные сотрудника:</strong> <br>
                                             <strong> Имя:</strong>
-                                            <input type="text" name="first_name" placeholder="Не более 30 символов" size="35"
+                                            <input type="text" name="first_name" placeholder="Не более 30 символов"
+                                                   size="35"
                                                    value="{{old ('first_name', $employee->first_name )}}"/><br>
                                             @if ($errors->any('first_name'))
                                                 <div class="alert alert-danger">
@@ -62,9 +63,9 @@
                                                 </div>
                                             @endif
                                             <hr>
-
                                             <strong> Фамилия:</strong>
-                                            <input type="text" name="first_name" placeholder="Не более 30 символов" size="30"
+                                            <input type="text" name="last_name" placeholder="Не более 30 символов"
+                                                   size="30"
                                                    value="{{old ('last_name', $employee->last_name )}}"/><br>
                                             @if ($errors->any('last_name'))
                                                 <div class="alert alert-danger">
@@ -76,7 +77,6 @@
                                                 </div>
                                             @endif
                                             <hr>
-
                                             <strong> Позиция:</strong>
                                             <input type="text" name="title" placeholder="Не более 30 символов" size="30"
                                                    value="{{old ('title', $employee->positions->title )}}"/><br>
@@ -90,11 +90,9 @@
                                                 </div>
                                             @endif
                                             <hr>
-
-
                                             <strong> Зарплата:</strong>
                                             <input type="text" name="salary" placeholder="Целое число" size="30"
-                                                   value="{{old ('salary', $employee->positions->salary )}} $"/><br>
+                                                   value="{{old ('salary', $employee->positions->salary )}} "/><br>
                                             @if ($errors->any('salary'))
                                                 <div class="alert alert-danger">
                                                     <ul>
@@ -105,36 +103,34 @@
                                                 </div>
                                             @endif
                                             <hr>
-
-
-
-
-
-
+                                            <input type="hidden" name="id" value="{{$employee->id}}"/>
                                             <input type="submit" value="Сохранить"/>
-                                            <form method="POST" action="/company-delete">
-                                                @csrf
-                                                @method ('DELETE')
-                                                <input type="hidden" name="id" value="{{$company->id}}"/>
-                                                <input type="submit" value="Удалить сотрудника"/>
-                                            </form>
-                                        </form></td>@endif
+                                        </form>
+
+
+                                        <form method="POST" action="/company-delete">
+                                            @csrf
+                                            @method ('DELETE')
+                                            <input type="hidden" name="id" value="{{$company->id}}"/>
+                                            <input type="submit" value="Удалить сотрудника"/>
+                                        </form>
+
+                                    </td>
+                                @endif
 
 
 
-                        @endforeach
+                            @endforeach
 
                         </tr>
                     </table>
-
-
 
 
                     <form action="" method="post" enctype="multipart/form-data">
                         @csrf
                         <strong>Добавить сотрудника:</strong> <br>
                         <input type="text" name="description" placeholder="Не более 1000 символов" size="100"
-                                   value="{{old ('description', $company->description )}}"/><br>
+                               value="{{old ('description', $company->description )}}"/><br>
                         @if ($errors->any('description'))
                             <div class="alert alert-danger">
                                 <ul>
@@ -160,7 +156,6 @@
                         <hr>
 
 
-
                         <input type="text" name="description" placeholder="Не более 1000 символов" size="100"
                                value="{{old ('description', $company->description )}}"/><br>
                         @if ($errors->any('description'))
@@ -175,7 +170,6 @@
                         <hr>
 
 
-
                         <input type="text" name="description" placeholder="Не более 1000 символов" size="100"
                                value="{{old ('description', $company->description )}}"/><br>
                         @if ($errors->any('description'))
@@ -188,24 +182,11 @@
                             </div>
                         @endif
                         <hr>
-
 
 
                         <input type="submit" value="Сохранить"/>
                     </form>
                     <hr>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                     <form action="" method="post" enctype="multipart/form-data">
@@ -237,7 +218,7 @@
                         @endif
                         <input type="submit" value="Сохранить"/>
                     </form>
-<br>
+                    <br>
                     @if (\Auth::check () and \Auth::user()->companies->id == $company->id)
                         <form method="POST" action="/company-delete">
                             @csrf
@@ -246,7 +227,7 @@
                             <input type="submit" value="Удалить свою компанию"/>
                         </form>
                     @endif
-<hr>
+                    <hr>
                     @if (\Auth::check ())
                         <div class="row">
                             <div class="col-md-6">

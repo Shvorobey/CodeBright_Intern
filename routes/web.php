@@ -33,6 +33,14 @@ Route::match(['delete'], '/company-delete', '\\' . \App\Http\Controllers\deleteC
 
 Route::post('/save_comment', '\\' . \App\Http\Controllers\saveCommentAction::class)->name('save_comment');
 
+Route::match(['delete'], '/employee-delete', '\\' . \App\Http\Controllers\deleteEmployeeAction::class)->name('employee_delete');
+
+Route::post('/save_employee', '\\' . \App\Http\Controllers\saveEmployeeAction::class)->name('save_employee');
+
+Route::post('/update_employee', '\\' . \App\Http\Controllers\updateEmployeeAction::class)->name('update_employee');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
