@@ -22,7 +22,7 @@
                                     <time class="entry-date published"
                                           datetime="{{$company->created_at}}">{{$company->created_at->format('d.m.Y г. в H:i')}}</time>
                                 </span>
-                          </div>
+                    </div>
                 </header>
                 <!-- .entry-header -->
                 <div class="entry-content">
@@ -72,18 +72,28 @@
                         <hr>
                         <input type="submit" value="Сохранить"/>
                     </form>
-                        @if (\Auth::check ())
-                    <div class="row">
-                        <div class="col-md-6">
-                            <strong>Коментарии:</strong>
-                            @foreach( $company->comments as $comment)
-                                <ol>
-                                    <li>{{$comment->body}} <br>
-                                    Создан: {{$comment->created_at->format('d.m.Y г. в H:i')}}</li>
-                                </ol>
-                            @endforeach
+
+                    @if (\Auth::check () and \Auth::user()->companies->id == $company->id)
+                        <form method="POST" action="/company-delete">
+                            @csrf
+                            @method ('DELETE')
+                            <input type="hidden" name="id" value="{{$company->id}}"/>
+                            <input type="submit" value="Удалить свою компанию"/>
+                        </form>
+                    @endif
+
+                    @if (\Auth::check ())
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Коментарии:</strong>
+                                @foreach( $company->comments as $comment)
+                                    <ol>
+                                        <li>{{$comment->body}} <br>
+                                            Создан: {{$comment->created_at->format('d.m.Y г. в H:i')}}</li>
+                                    </ol>
+                                @endforeach
+                            </div>
                         </div>
-                    </div>
 
                 </div>
                 <section id="comments" class="comments-area" aria-label="Post Comments">
@@ -104,17 +114,17 @@
                                 <input id="author" name="name" type="text" value="" size="30" maxlength="245"
                                        aria-required='true' required='required'/>
                             </p>
-{{--                            <p class="comment-form-email">--}}
-{{--                                <label for="email">Email <span class="required"></span></label>--}}
-{{--                                <input id="email" name="email" type="email" value="" size="30" maxlength="100"--}}
-{{--                                       aria-describedby="email-notes" aria-required='true' required='required'/>--}}
-{{--                            </p>--}}
+                            {{--                            <p class="comment-form-email">--}}
+                            {{--                                <label for="email">Email <span class="required"></span></label>--}}
+                            {{--                                <input id="email" name="email" type="email" value="" size="30" maxlength="100"--}}
+                            {{--                                       aria-describedby="email-notes" aria-required='true' required='required'/>--}}
+                            {{--                            </p>--}}
                             <p class="form-submit">
                                 <input name="submit" type="submit" id="submit" class="submit"
                                        value="Сохранить комментарий"/>
                                 <input type="hidden" name="company_id" value="{{old('id', $company->id)}}"/>
-{{--                                <input type='hidden' name='comment_post_ID' value='359' id='comment_post_ID'/>--}}
-{{--                                <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>--}}
+                                {{--                                <input type='hidden' name='comment_post_ID' value='359' id='comment_post_ID'/>--}}
+                                {{--                                <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>--}}
                             </p>
                         </form>
                     </div>

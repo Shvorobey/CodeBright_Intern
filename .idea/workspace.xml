@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a9a439c-ea2a-4afc-a27f-8dba8f39871c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/deleteCompanyAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Company.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/company.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/company.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,45 +86,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="121" selection-start-line="29" selection-start-column="108" selection-end-line="29" selection-end-column="122" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/company.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/deleteCompanyAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="510">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3062#3068#0#HTML" expanded="true" />
+                <element signature="e#40#57#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
-              <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
-              <folding>
-                <marker date="1560632142797" expanded="true" signature="1742:1858" ph="..." />
-              </folding>
+        <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/companies">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
+              <filtering>
+                <filter text="" />
+              </filtering>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/employees">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
+              <filtering>
+                <filter text="" />
+              </filtering>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/positions">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
+              <filtering>
+                <filter text="" />
+              </filtering>
             </state>
           </provider>
         </entry>
@@ -170,22 +174,23 @@
         <option value="$PROJECT_DIR$/database/factories/commentFactory.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CompanyUpdateController.php" />
         <option value="$PROJECT_DIR$/resources/views/company_update.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/database/factories/companiesFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/pagesTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/showCompanyAction.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/saveCommentAction.php" />
-        <option value="$PROJECT_DIR$/resources/views/company.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_06_10_141707_create_companies_table.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/Company.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/resources/views/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/Company.php" />
+        <option value="$PROJECT_DIR$/resources/views/company.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/deleteCompanyAction.php" />
       </list>
     </option>
   </component>
@@ -362,7 +367,7 @@
       <workItem from="1560434890172" duration="1063000" />
       <workItem from="1560464121064" duration="116000" />
       <workItem from="1560503511000" duration="9458000" />
-      <workItem from="1560630261611" duration="12282000" />
+      <workItem from="1560630261611" duration="19622000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1560237808095</created>
@@ -420,17 +425,23 @@
       <option name="project" value="LOCAL" />
       <updated>1560639929132</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="start of company administration">
+      <created>1560721815832</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560721815832</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77097000" />
+    <option name="totallyTimeSpent" value="84437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28727508" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28727508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -444,13 +455,13 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49871466" visible="true" weight="0.19086021" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5012854" side_tool="true" weight="0.19086021" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5012854" side_tool="true" visible="true" weight="0.19086021" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3293011" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.23136246" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.23136246" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,16 +474,10 @@
     <MESSAGE value="Begin implementation of authentication" />
     <MESSAGE value="Implemented authentication. Begin implementation of comments" />
     <MESSAGE value="commentaries implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="commentaries implemented" />
+    <MESSAGE value="start of company administration" />
+    <option name="LAST_COMMIT_MESSAGE" value="start of company administration" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/contact.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="14" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -570,24 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/employees">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="18434fd3-b351-4029-b218-8f43b5dcc13a">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/positions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="18434fd3-b351-4029-b218-8f43b5dcc13a">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/empioyeesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -616,15 +603,6 @@
           <folding>
             <element signature="e#66#80#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/comments">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="18434fd3-b351-4029-b218-8f43b5dcc13a">
-          <filtering>
-            <filter text="" />
-          </filtering>
         </state>
       </provider>
     </entry>
@@ -749,31 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/companies">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_10_141707_create_companies_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
@@ -798,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/showCompanyAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -815,37 +761,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="121" selection-start-line="29" selection-start-column="108" selection-end-line="29" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
+        <state relative-caret-position="323">
+          <caret line="55" column="119" selection-start-line="55" selection-start-column="93" selection-end-line="55" selection-end-column="121" />
           <folding>
-            <marker date="1560632142797" expanded="true" signature="1742:1858" ph="..." />
+            <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3062#3068#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/company.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        <state relative-caret-position="319">
+          <caret line="85" column="41" lean-forward="true" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Company.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="476">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="31" column="122" selection-start-line="31" selection-start-column="122" selection-end-line="31" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3062#3068#0#HTML" expanded="true" />
+            <marker date="1560726706950" expanded="true" signature="1742:1858" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/comments">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_10_141707_create_companies_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/positions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/employees">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e4ce8b82-9d4a-444e-87e0-5b4c887dbc46/schema/code/table/companies">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="8ed1ea56-8f42-4c2d-8ae8-f861b138ba1f">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/deleteCompanyAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
