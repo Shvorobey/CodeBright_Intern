@@ -11,11 +11,8 @@
 |
 */
 
-Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');
-
-//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', '\\' . \App\Http\Controllers\showCompaniesAction::class)->name('index');
 
@@ -27,7 +24,7 @@ Route::get('/locator', function () {
     return view('locator');
 })->name('locator');
 
-Route::match(['get', 'post'],'/company/{id}', '\\' . \App\Http\Controllers\showCompanyAction::class)->name('single_company');
+Route::match(['get', 'post'], '/company/{id}', '\\' . \App\Http\Controllers\showCompanyAction::class)->name('single_company');
 
 Route::match(['delete'], '/company-delete', '\\' . \App\Http\Controllers\deleteCompanyAction::class)->name('company_delete');
 

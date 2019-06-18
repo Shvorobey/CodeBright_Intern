@@ -6,7 +6,6 @@
         <img src="/images/loading.gif">
 
     </div>
-
 </div>
 
 <style type="text/css">
@@ -19,7 +18,6 @@
         background: #00FFFF;
         z-index: 99
     }
-
     #preloader_malc div {
         background: #00FFFF;
         width: 200px;
@@ -43,16 +41,15 @@
 
 <script type="text/javascript">
 
-    window.onload = function() {
+    window.onload = function () {
 
-        setTimeout(function() {
+        setTimeout(function () {
 
             document.getElementById("preloader_malc").style.display = "none";
 
         }, 2800);
 
     };
-
 </script>
 
 

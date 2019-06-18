@@ -10,19 +10,19 @@ class Company extends Model
         'name', 'user_id', 'key',
     ];
 
-    public function employees ()
+    public function employees()
     {
-        return $this -> hasMany(Employee::class);
+        return $this->hasMany(Employee::class);
     }
 
-    public function comments ()
+    public function comments()
     {
-        return $this -> hasMany(Comment::class);
+        return $this->hasMany(Comment::class);
     }
 
-    public function users ()
+    public function users()
     {
-    return$this -> belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
 }

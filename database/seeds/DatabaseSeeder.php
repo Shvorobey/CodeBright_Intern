@@ -15,14 +15,13 @@ class DatabaseSeeder extends Seeder
         \Illuminate\Database\Eloquent\Model::unguard();
 
         $this->call([socialNetworksTableSeeder::class,
-        pagesTableSeeder::class,
+            pagesTableSeeder::class,
         ]);
 
-        factory(\App\Company::class, 50) -> create();
-        factory(\App\Employee::class, 200) -> create();
+        factory(\App\Company::class, 50)->create();
+        factory(\App\Employee::class, 200)->create();
         factory(\App\Position::class, 200)->create();
     }
-
 
 
 }

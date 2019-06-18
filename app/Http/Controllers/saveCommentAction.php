@@ -10,7 +10,7 @@ class saveCommentAction extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request)
@@ -19,7 +19,7 @@ class saveCommentAction extends Controller
             $this->validate($request, [
                 'body' => 'required | max: 1000 | string ',
                 'name' => 'required | max: 100 | string ',
-                'company_id'=>'integer',
+                'company_id' => 'integer',
             ]);
             $comment = new Comment;
             $comment->body = $request->input('body');

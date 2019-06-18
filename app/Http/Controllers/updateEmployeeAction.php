@@ -26,7 +26,7 @@ class updateEmployeeAction extends Controller
             $employee = Employee::find($request->input('id'));
             $employee->first_name = $request->input('first_name');
             $employee->last_name = $request->input('last_name');
-            $positions = Position::where  ('employee_id', $request->input('id'))->first();
+            $positions = Position::where('employee_id', $request->input('id'))->first();
             $positions->title = $request->input('title');
             $positions->salary = $request->input('salary');
 

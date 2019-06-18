@@ -8,6 +8,6 @@ class showCompaniesAction extends Controller
 {
     public function __invoke(Request $request)
     {
-        return view('index', ['companies' => \App\Company::paginate (5)]);
+        return view('index', ['companies' => \App\Company::paginate(5)]);
     }
 }

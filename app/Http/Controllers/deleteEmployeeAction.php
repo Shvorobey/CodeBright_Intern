@@ -10,16 +10,16 @@ class deleteEmployeeAction extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request)
     {
         $employe = Employee::FindOrFail($request->input('id'));
 
-            $employe->positions->delete();
-            $employe->delete();
+        $employe->positions->delete();
+        $employe->delete();
 
-            return back();
+        return back();
     }
 }

@@ -38,7 +38,7 @@
                                 <th align="center">Управление персоналом</th>
                             @endif
                         </tr>
-                            @foreach($company->employees as $employee)
+                        @foreach($company->employees as $employee)
                             <tr align="center">
                                 <td>{{$employee->last_name}} {{$employee->first_name}}</td>
                                 <td>{{$employee->positions->title}}</td>
@@ -116,8 +116,8 @@
                                     </td>
                                 @endif
                             </tr>
-                            @endforeach
-                            </table>
+                        @endforeach
+                    </table>
 
                     <form action="/save_employee" method="post" enctype="multipart/form-data">
                         @csrf
@@ -194,7 +194,6 @@
                                 @endforeach
                             </div>
                         </div>
-
                 </div>
                 <section id="comments" class="comments-area" aria-label="Post Comments">
                     <div id="respond" class="comment-respond">
@@ -214,17 +213,10 @@
                                 <input id="author" name="name" type="text" value="" size="30" maxlength="245"
                                        aria-required='true' required='required'/>
                             </p>
-                            {{--                            <p class="comment-form-email">--}}
-                            {{--                                <label for="email">Email <span class="required"></span></label>--}}
-                            {{--                                <input id="email" name="email" type="email" value="" size="30" maxlength="100"--}}
-                            {{--                                       aria-describedby="email-notes" aria-required='true' required='required'/>--}}
-                            {{--                            </p>--}}
                             <p class="form-submit">
                                 <input name="submit" type="submit" id="submit" class="submit"
                                        value="Сохранить комментарий"/>
                                 <input type="hidden" name="company_id" value="{{old('id', $company->id)}}"/>
-                                {{--                                <input type='hidden' name='comment_post_ID' value='359' id='comment_post_ID'/>--}}
-                                {{--                                <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>--}}
                             </p>
                         </form>
                     </div>
@@ -232,9 +224,7 @@
                 </section>
                 @endif
             </article>
-            <!-- #post-## -->
         </main>
-        <!-- #main -->
     </div>
 @endsection
 
@@ -242,7 +232,6 @@
     <!-- Advertising Widget -->
     <div class="card my-4">
         <h5 class="card-header">Мы в соц. сетях:</h5>
-
         @inject('network', 'App\socialNetwork')
         <div>
             {{ $network->showSocialNetwork() }}

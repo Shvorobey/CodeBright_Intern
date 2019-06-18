@@ -11,7 +11,7 @@ class saveEmployeeAction extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request)
@@ -29,7 +29,7 @@ class saveEmployeeAction extends Controller
             $employee->last_name = $request->input('last_name');
             $employee->save();
 
-            $positions =new Position();
+            $positions = new Position();
             $positions->employee_id = $employee->id;
             $positions->title = $request->input('title');
             $positions->salary = $request->input('salary');

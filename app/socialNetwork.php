@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class socialNetwork extends Model
 {
-    public function showSocialNetwork ()
+    public function showSocialNetwork()
     {
         try {
             foreach (socialNetwork::distinct()->get(['url', 'name']) as $network) {
@@ -14,7 +14,7 @@ class socialNetwork extends Model
 
                 echo '<a href="' . $network->url . '">' . $network->name . '</a> <br>';
             }
-        }catch (Exception $e) {
+        } catch (Exception $e) {
             Debugbar::addException($e);
         }
 
