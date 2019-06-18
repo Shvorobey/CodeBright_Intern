@@ -208,15 +208,11 @@
                                 <textarea id="comment" name="body" cols="45" rows="8"
                                           maxlength="65525"></textarea>
                             </p>
-                            <p class="comment-form-author">
-                                <label for="author">Имя <span class="required"></span></label>
-                                <input id="author" name="name" type="text" value="" size="30" maxlength="245"
-                                       aria-required='true' required='required'/>
-                            </p>
+                            <input type="hidden" name="company_id" value="{{old('id', $company->id)}}"/>
                             <p class="form-submit">
                                 <input name="submit" type="submit" id="submit" class="submit"
                                        value="Сохранить комментарий"/>
-                                <input type="hidden" name="company_id" value="{{old('id', $company->id)}}"/>
+
                             </p>
                         </form>
                     </div>
