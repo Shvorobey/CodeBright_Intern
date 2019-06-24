@@ -13,7 +13,7 @@
                     <h2 class="card-title" style="color:#008000">
                         <a href="{{route('single_company', $company->id)}}">{{$company->name}}</a></h2>
                     <p class="card-text">{{$company->description}}</p>
-                    <a href="{{route('single_company', $company->key)}}" class="btn btn-primary">Перейти к компании
+                    <a href="{{route('single_company', $company->id)}}" class="btn btn-primary">Перейти к компании
                         &rarr;</a>
                 </div>
                 <div class="card-footer text-muted">

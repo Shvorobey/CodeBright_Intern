@@ -11,7 +11,7 @@
                 <header class="entry-header">
                     <div class="media-attachment">
                         <div class="post-thumbnail">
-                            <img width="300" height="750" src="{{$company->image}}"
+                            <img width="750" height="300" src="{{$company->image}}"
                                  class="attachment-full size-full wp-post-image" alt=""/>
                         </div>
                     </div>
