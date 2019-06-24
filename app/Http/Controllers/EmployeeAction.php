@@ -21,7 +21,7 @@ class employeeAction extends Controller
                 'first_name' => 'required | max: 30 | string ',
                 'last_name' => 'required | max: 30 | string ',
                 'title' => 'required | max: 100 | string ',
-                'salary' => 'required | integer | string ',
+                'salary' => 'required | numeric | string ',
             ]);
             $employee = new Employee();
             $employee->company_id = $request->input('id');
@@ -45,7 +45,7 @@ class employeeAction extends Controller
                 'first_name' => 'required | max: 30 | string ',
                 'last_name' => 'required | max: 30 | string ',
                 'title' => 'required | max: 100 | string ',
-                'salary' => 'required | integer | string ',
+                'salary' => 'required | numeric | string ',
             ]);
             $employee = Employee::find($request->input('id'));
             $employee->first_name = $request->input('first_name');

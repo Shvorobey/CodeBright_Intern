@@ -91,7 +91,7 @@
                                             @endif
                                             <hr>
                                             <strong> Зарплата:</strong>
-                                            <input type="text" name="salary" placeholder="Целое число" size="30"
+                                            <input type="text" name="salary" placeholder="Числовое значение" size="30"
                                                    value="{{old ('salary', $employee->positions->salary )}} "/><br>
                                             @if ($errors->any('salary'))
                                                 <div class="alert alert-danger">
