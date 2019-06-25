@@ -119,30 +119,31 @@
                         @endforeach
                     </table>
 
-                    <form action="/save_employee" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <strong>Добавить сотрудника:</strong> <br>
-                        <p>Имя:</p>
-                        <input type="text" name="first_name" placeholder="Не более 30 символов" size="30"
-                               value=""/><br>
+                    @if (\Auth::check () and \Auth::user()->companies->id == $company->id)
+                        <form action="/save_employee" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <strong>Добавить сотрудника:</strong> <br>
+                            <p>Имя:</p>
+                            <input type="text" name="first_name" placeholder="Не более 30 символов" size="30"
+                                   value=""/><br>
 
-                        <p>Фамилия:</p>
-                        <input type="text" name="last_name" placeholder="Не более 30 символов" size="30"
-                               value=""/><br>
+                            <p>Фамилия:</p>
+                            <input type="text" name="last_name" placeholder="Не более 30 символов" size="30"
+                                   value=""/><br>
 
-                        <p>Должность:</p>
-                        <input type="text" name="title" placeholder="Не более 100 символов" size="100"
-                               value=""/><br>
+                            <p>Должность:</p>
+                            <input type="text" name="title" placeholder="Не более 100 символов" size="100"
+                                   value=""/><br>
 
-                        <p>Зарплата:</p>
-                        <input type="text" name="salary" placeholder="Целое число" size="10"
-                               value=""/><br>
+                            <p>Зарплата:</p>
+                            <input type="text" name="salary" placeholder="Целое число" size="10"
+                                   value=""/><br>
 
-                        <input type="hidden" name="id" value="{{$company->id}}"/>
-                        <input type="submit" value="Сохранить"/>
-                    </form>
-                    <hr>
-
+                            <input type="hidden" name="id" value="{{$company->id}}"/>
+                            <input type="submit" value="Сохранить"/>
+                        </form>
+                        <hr>
+                    @endif
                     <form action="" method="post" enctype="multipart/form-data">
                         @csrf
                         <strong>Описание компании:</strong> <br>
