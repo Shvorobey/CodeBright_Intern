@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Employee;
+use App\Http\Requests\EmployeeRequest;
 use App\Position;
 use Illuminate\Http\Request;
 
@@ -39,14 +40,9 @@ class employeeAction extends Controller
         return back();
     }
 
-    public function update (Request $request){
+    public function update (EmployeeRequest $request){
         if ($request->method() == 'POST') {
-            $this->validate($request, [
-                'first_name' => 'required | max: 30 | string ',
-                'last_name' => 'required | max: 30 | string ',
-                'title' => 'required | max: 100 | string ',
-                'salary' => 'required | numeric | string ',
-            ]);
+
             $employee = Employee::find($request->input('id'));
             $employee->first_name = $request->input('first_name');
             $employee->last_name = $request->input('last_name');
