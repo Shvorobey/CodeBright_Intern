@@ -15,7 +15,7 @@ class employeeAction extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function save (EmployeeRequest $request)
+    public function save(EmployeeRequest $request)
     {
         if ($request->method() == 'POST') {
 
@@ -35,7 +35,8 @@ class employeeAction extends Controller
         return back();
     }
 
-    public function update (EmployeeRequest $request){
+    public function update(EmployeeRequest $request)
+    {
         if ($request->method() == 'POST') {
 
             $employee = Employee::find($request->input('id'));
@@ -52,7 +53,8 @@ class employeeAction extends Controller
         return back();
     }
 
-    public function delete (Request $request){
+    public function delete(Request $request)
+    {
         $employe = Employee::FindOrFail($request->input('id'));
 
         $employe->positions->delete();
