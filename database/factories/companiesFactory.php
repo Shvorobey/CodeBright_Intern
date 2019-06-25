@@ -10,5 +10,6 @@ $factory->define(\App\Company::class, function (Faker $faker) {
         'name' => $faker->unique()->text(30),
         'description' => $faker->text(250),
         'image' => $faker->imageUrl(750, 300),
+        'user_id' => $faker->unique()->numberBetween(1, 50),
     ];
 });

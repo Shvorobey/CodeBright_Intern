@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
         factory(\App\Company::class, 50)->create();
         factory(\App\Employee::class, 200)->create();
         factory(\App\Position::class, 200)->create();
+        factory(\App\Comment::class, 200)->create();
+        factory(\App\User::class, 50)->create();
     }
 
 
