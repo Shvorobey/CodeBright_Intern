@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Company;
+use App\Http\Requests\CommentRequest;
 use Illuminate\Http\Request;
 
 class showCompanyAction extends Controller
 {
-    public function __invoke(Request $request, $id)
+    public function __invoke(CommentRequest $request, $id)
     {
         if ($request->method() == 'POST') {
-            $this->validate($request, [
-                'description' => 'required | max: 1000 | string ',
-                'image' => 'image | dimensions: min_width=200, min_height=500 | file',
-            ]);
+
             $company = Company::find($request->input('id'));
             $company->description = $request->input('description');
 
