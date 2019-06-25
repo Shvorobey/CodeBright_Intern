@@ -15,15 +15,10 @@ class employeeAction extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function save (Request $request)
+    public function save (EmployeeRequest $request)
     {
         if ($request->method() == 'POST') {
-            $this->validate($request, [
-                'first_name' => 'required | max: 30 | string ',
-                'last_name' => 'required | max: 30 | string ',
-                'title' => 'required | max: 100 | string ',
-                'salary' => 'required | numeric | string ',
-            ]);
+
             $employee = new Employee();
             $employee->company_id = $request->input('id');
             $employee->first_name = $request->input('first_name');
