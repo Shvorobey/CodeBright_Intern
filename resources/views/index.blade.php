@@ -21,7 +21,7 @@
                     <strong>Работники компании:</strong>
 
                     <table cellpadding="7" border="2" bgcolor="#DCDCDC">
-                        {{--                               <caption>Сотрудники компании</caption>--}}
+                        <caption>Сотрудники компании</caption>
                         <tr>
                             <th align="center">Фамилия Имя</th>
                             <th align="center">Должность</th>

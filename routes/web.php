@@ -16,10 +16,6 @@ Route::get('/admin', 'HomeController@index')->name('admin');
 
 Route::get('/', '\\' . \App\Http\Controllers\showCompaniesAction::class)->name('index');
 
-Route::get('/about', 'showPagesAction@about')->name('about');
-
-Route::get('/contact', 'showPagesAction@contact')->name('contact');
-
 Route::get('/locator', function () {
     return view('locator');
 })->name('locator');

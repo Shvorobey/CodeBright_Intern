@@ -37,19 +37,16 @@ class employeeAction extends Controller
 
     public function update(EmployeeRequest $request)
     {
-        if ($request->method() == 'POST') {
+        $employee = Employee::find($request->input('id'));
+        $employee->first_name = $request->input('first_name');
+        $employee->last_name = $request->input('last_name');
+        $positions = Position::where('employee_id', $request->input('id'))->first();
+        $positions->title = $request->input('title');
+        $positions->salary = $request->input('salary');
 
-            $employee = Employee::find($request->input('id'));
-            $employee->first_name = $request->input('first_name');
-            $employee->last_name = $request->input('last_name');
-            $positions = Position::where('employee_id', $request->input('id'))->first();
-            $positions->title = $request->input('title');
-            $positions->salary = $request->input('salary');
+        $employee->save();
+        $positions->save();
 
-            $employee->save();
-            $positions->save();
-
-        }
         return back();
     }
 

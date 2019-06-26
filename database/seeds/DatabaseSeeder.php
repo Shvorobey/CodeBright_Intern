@@ -14,16 +14,10 @@ class DatabaseSeeder extends Seeder
     {
         \Illuminate\Database\Eloquent\Model::unguard();
 
-        $this->call([socialNetworksTableSeeder::class,
-            pagesTableSeeder::class,
-        ]);
-
-        factory(\App\Company::class, 50)->create();
+        factory(\App\Company::class, 49)->create();
         factory(\App\Employee::class, 200)->create();
         factory(\App\Position::class, 200)->create();
         factory(\App\Comment::class, 200)->create();
         factory(\App\User::class, 50)->create();
     }
-
-
 }

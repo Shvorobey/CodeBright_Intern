@@ -16,17 +16,12 @@ class saveCommentAction extends Controller
      */
     public function __invoke(CommentRequest $request)
     {
-        if ($request->method() == 'POST') {
+        $comment = new Comment;
+        $comment->body = $request->input('body');
+        $comment->company_id = $request->input('company_id');
 
-            $comment = new Comment;
-            $comment->body = $request->input('body');
-            $comment->company_id = $request->input('company_id');
+        $comment->save();
 
-            $comment->save();
-
-        } else {
-            return back();
-        }
         return back();
     }
 }
